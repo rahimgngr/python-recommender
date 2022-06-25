@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Recommendation Tester</title>
+</head>
+<body>
+<div id="recommendations"> </div>
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"></script>	
+
+<script type="text/javascript">
+	var liked_users={
+		"191129":[
+			{"id":191129,"displayName":"Shauna","city":"Mus","photoURL":"https://placedog.net/640/480?r","age":8,"color":"yeşil","gender":"erkek","rating":3,"timestamp":"2022-06-06T09:26:15.721Z"},
+			{"id":191129,"displayName":"Shauna","city":"Mus","photoURL":"https://placedog.net/640/480?r","age":8,"color":"yeşil","gender":"erkek","rating":3,"timestamp":"2022-06-06T09:26:15.721Z"}
+				]
+	}
+			axios.post('/matchingPets/default/call/json/get_recommendations', {
+			liked_users:liked_users
+		}).then(function(response){
+			console.log(response)
+			$("#recommendations").html(response.data)
+
+		}).catch(function(e) {
+			console.log("Error:",e)
+		});
+
+
+</script>
+</body>
+</html>

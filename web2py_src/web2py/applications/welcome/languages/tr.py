@@ -223,6 +223,7 @@
 'This email already has an account': 'Bu e-postaya ait bir hesap zaten var',
 'Time in Cache (h:m:s)': 'Time in Cache (h:m:s)',
 'Timestamp': 'Zaman damgası',
+'Too short': 'Too short',
 'Traceback': 'Traceback',
 'Twitter': 'Twitter',
 'Two-step Login Authentication Code': 'Two-step Login Authentication Code',
